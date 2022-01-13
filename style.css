@@ -93,7 +93,7 @@ background: var(--Dark-moderate-cyan
   /*header*/
 .header{
     height: 25rem;
-    background: url('./images/mobile/image-header.jpg') bottom
+    background: url('./images/desktop/image-header.jpg') bottom
       center/cover no-repeat;
     padding: 1em 1em;
     
