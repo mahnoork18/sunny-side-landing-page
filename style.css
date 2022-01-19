@@ -38,6 +38,7 @@
       letter-spacing: 0.1em;
   }.parah-text{
       color: var(--Dark-grayish-blue);
+      font-size: 2rem;
       font-weight: 900;
       width: 100%;
       margin-top: 1em;
@@ -62,31 +63,29 @@ background: var(--Dark-moderate-cyan
   }
   .ff-sc{
     font-family: var(--ff-01);
+    font-size: 1rem;
   }
   .fw-light{
       font-weight: 900;
-      font-size: clamp(1rem,2.5vw, 2rem);
       text-align: center;
   }
 
   .fw-medium{
       font-weight: 900;
-      font-size: clamp(1.5rem,12.5vw, 4rem);
       text-align: center
   }
   .fw-heavy-h{
       font-weight: 900;
-      font-size:  clamp(1rem, 10vw, 6rem); 
       text-align: center;
   }
   
   /*header*/
 .header{
-    height: 25rem;
+    height: 45rem;
     background: url('./images/desktop/image-header.jpg') bottom
       center/cover no-repeat;
-  padding:1em 2em;
-  padding-bottom:20em;
+    padding: 1em 1em;
+    padding-bottom: 20em;
     
 }
 .header-logo{
@@ -99,22 +98,29 @@ background: var(--Dark-moderate-cyan
 .heading{
     display: flex;
     flex-direction: column;
+    margin-top: 28em;
 margin: 0 auto;    
-margin-top: 2em;
 align-items: center;
 width: 100%;
-max-width: 100px;
+max-width: 800px;
 text-transform: uppercase;
 }
-.heading h1{
-  font-size:2rem;
 .arrow-img{
-    height: 10px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     margin-top: 3em;
+}
+.cta{
+    width: 30%;
+    margin-top: -15px;
+    padding: 0.8em;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size:1rem;
 }
 /*Grid-Box*/
 .box-a{
@@ -134,6 +140,7 @@ text-transform: uppercase;
 .box-a-content h2{
     margin-bottom: 0.5em;
 }
+
 .box-b-content{
     padding: 1em;
 }
@@ -181,7 +188,7 @@ button{
     text-align: center;
 }
 .gd-content p{
-    font-size: 10px;
+    font-size: 0.8rem;
 }
 /*photogrpahy section*/
 .ph-container{
@@ -373,7 +380,7 @@ a{
     .heading{
         display: flex;
         margin: 0 auto;    
-        margin-top: 1.3em;
+        margin-top: 7em;
         align-items: center;
         width: 100%;
         max-width: 600px;
@@ -384,11 +391,9 @@ a{
             align-items: right;
             gap: 2em;
         }
-        .heading h1{
-            font-size: 1rem;
-        }
+        
         .arrow-img img{
-            height: 60px;
+            height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -399,15 +404,7 @@ a{
             font-weight: 900;
             font-size: 10px
         }
-        .cta{
-            width: 30%;
-            margin-top: -5px;
-            padding: 1em;
-            border: 1px solid transparent;
-            border-radius: 20px;
-            text-transform: uppercase;
-            font-size: 8px;
-        }
+     
         .cta:hover{
             transition: 0.2s ease;
             background: rgb(117, 200, 248);
@@ -452,7 +449,7 @@ a{
 
         }
         .box-a-content p,.box-b-content p{
-            font-size: 10px;
+            font-size: 0.9rem;
             text-align: left;
             font-weight: 600;
         }
@@ -463,7 +460,7 @@ a{
             margin-left: 2px;
         }
         .btn-yellow,.btn-red{
-            font-size: 0.4rem;
+            font-size: 0.9rem;
         }
         .grid-col-2{
             display: grid;
@@ -554,6 +551,15 @@ background-size: cover;
 }
     }
     @media(max-width:760px){
+        .header{
+            height: 300px;
+        }
+        .heading{
+            margin-top: 5em;
+        }
+        .heading h1{
+            font-size: 1rem;
+        }
         .mobile-toggle{
             display: block;
         }
@@ -581,6 +587,19 @@ background-size: cover;
        
         .ct-heading{
             margin-top: 4em;
+        }
+        .box-a-content p,.box-b-content p{
+            font-size: 0.7rem;
+          
+        }
+        .quote h4{
+            font-size:0.8rem;
+        }
+        .bio h4{
+            font-size:0.8rem ;
+        }
+        .bio h5{
+            font-size: 0.7rem;
         }
        
     }
