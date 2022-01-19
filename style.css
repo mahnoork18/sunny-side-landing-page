@@ -105,6 +105,8 @@ width: 100%;
 max-width: 100px;
 text-transform: uppercase;
 }
+.heading h1{
+  font-size:4rem;
 .arrow-img{
     height: 10px;
     display: flex;
