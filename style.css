@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
 *::before,*::after{
-  margin:0;
-  padding:0;
-  
+ 
     box-sizing: border-box;
 }
 :root {
@@ -126,10 +124,12 @@ text-transform: uppercase;
 }
 /*Grid-Box*/
 .box-a{
+
     width: 100%;
 }
 .box-b{
     width: 100%;
+   
 }
 .box-img img{
     width: 100%;
@@ -214,6 +214,10 @@ button{
    
 }
 /*client's testimonial*/
+.ct-section{
+    margin-top: 8em;
+    margin-bottom: 4em;
+}
 .ct-container{
     display: flex;
     flex-direction: column;
@@ -244,23 +248,51 @@ text-align: center;
     margin-top: 1em;
 }
 /*gallery*/
-.wrapper img {
-    width: 200px;
-    height: 300px;
-    object-fit: contain;
-}
+
 .wrapper {
     display: flex;
-    width: 100%;
-    margin-bottom: -30px;
-    overflow: hidden;
-  }
-/*mobile-gallery*/
  
+    max-width: 100%;
+  }
+  .wrapper .img-1{
+      content: url(./images/desktop/image-gallery-milkbottles.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 400px;
+      height: 400px;
+  }
+  .wrapper .img-2{
+    content: url(./images/desktop/image-gallery-orange.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+      height: 400px;
+}
+.wrapper .img-3{
+    content: url(./images/desktop/image-gallery-cone.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+      height: 400px;
+}
+.wrapper .img-4{
+    content: url(./images/desktop/image-gallery-sugarcubes.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+      height: 400px;
+}
+
 /*footer*/
 footer{
     background: var(--Dark-moderate-cyan);
-    height: 18rem;
+    min-height: 18rem;
+    width: 100%;
+
 }
 .footer-container{
     width: 100%;
@@ -289,6 +321,7 @@ a{
 .social-icons{
     display: flex;
     margin-top: 2em;
+    margin-bottom: 1em;
     gap: 2em;
 }
 .fa-facebook-square,.fa-instagram,.fa-twitter,.fa-pinterest{
@@ -314,7 +347,7 @@ a{
     background: transparent;
     outline: none;
     border: 1px solid transparent;
-
+    
 }
 .mobile-menu{
     position: absolute;
@@ -326,12 +359,12 @@ a{
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
-            font-size: 1em;
+    font-size: 1em;
     display:none;
     line-height: 2em;
     margin-left: auto;
     margin-right: auto;
-  transition: 0.5s all ease-in;
+    transition: 0.5s all ease-in;
     background: var(--White);
     text-align: center;
     
@@ -341,8 +374,9 @@ a{
     font-weight: 400;
     font-size: 0.9rem;
 }
+
 .show {
-  display: flex;
+    display: flex;
   transition: 0.5s;
 }
 .mobile-menu .cta{
@@ -371,7 +405,7 @@ a{
 }
 
 
-@media only screen and (min-width:20em){
+@media only screen and (min-width:30em){
     
     .header{
         min-height: 300px;
@@ -474,13 +508,11 @@ a{
         .grid-reverse :first-child{
             order:2;
             }
-       /* .wrapper{
-            display: flex;
-            width: 100%;
-            background:red;
-            overflow-x: hidden;
-
-        }*/
+      .wrapper{
+          width: 100%;
+          overflow: hidden;
+      }
+    
         .gd-container,.ph-container{
 width: 50% 50%;
 height: 30rem;
@@ -504,7 +536,9 @@ background-size: cover;
                 justify-content: center;
                 align-items: center;
                 margin-top: 2em;
+                margin-bottom: 8em;
                 text-align: center;
+                width: 80%;
 
             }
             .ct-heading{
@@ -532,10 +566,8 @@ background-size: cover;
 .wrapper{
     width: 100%;
 }
-.wrapper img{
-    max-width: 100%;
-    height: 300px;
-    object-fit: contain;
+footer{
+    width: 100%;
 }
 .footer-head h2{
     font-size: 2rem;
@@ -553,14 +585,21 @@ background-size: cover;
 }
     }
     @media(max-width:768px){
+        body{
+            overflow-x: hidden;
+        }
+      
         .header{
-            height: 300px;
+            height: 25rem;
+            background: url('./images/mobile/image-header.jpg') top center/cover no-repeat;
+            padding-bottom: 20em;
+
         }
         .heading{
-            margin-top: 5em;
+            margin-top:10em;
         }
         .heading h1{
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
         .mobile-toggle{
             display: block;
@@ -568,16 +607,13 @@ background-size: cover;
         .desktop-nav{
             display: none;
         }
-        .wrapper{
-            max-width: 100%;
-            flex-wrap: wrap;
-            margin-bottom: -2px;
-        }
-        .wrapper img{
-            width: 138px;
-            height: 158px;
-            object-fit: contain;
-        }
+       .ct-container{
+           flex-direction: column;
+       }
+       .ct-heading{
+           font-size: 0.6rem;
+       }
+      
         .container{
             margin-top: 2em;
             flex-direction: column;
@@ -590,6 +626,7 @@ background-size: cover;
         .ct-heading{
             margin-top: 4em;
         }
+       
         .box-a-content p,.box-b-content p{
             font-size: 0.7rem;
           
@@ -603,5 +640,53 @@ background-size: cover;
         .bio h5{
             font-size: 0.7rem;
         }
-       
+        /*mobile-gallery*/
+        .wrapper{
+            width:100%;
+            flex-wrap: wrap;
+        }
+.wrapper .img-1{
+    content: url(./images/mobile/image-gallery-milkbottles.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 180px;
+    height: auto;
+  
+}
+.wrapper .img-2{
+  content: url(./images/mobile/image-gallery-orange.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 180px;
+  height: auto;
+
+}
+.wrapper .img-3{
+  content: url(./images/mobile/image-gallery-cone.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 180px;
+  height: auto;
+
+}
+.wrapper .img-4{
+  content: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 180px;
+  height: auto;
+
+}
+}
+@media(min-width:992px){
+    .wrapper{
+        width: 100%;
     }
+    footer{
+        width: 100%;
+    }
+}
